@@ -1,0 +1,47 @@
+[
+  {
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "key": "firstName",
+        "wrappers": ["custome-wrapper"],
+        "className": "col-6",
+        "type": "custome-input",
+        "templateOptions": {
+          "label": "Email address",
+          "placeholder": "Enter email",
+          "required": true,
+          "attributes": {
+            "class": "fer from attr"
+          },
+          "disabled": false,
+          "hidden": false,
+          "maxLength": 14,
+          "readonly": false,
+          "wrapperClass": "wrapper-fer",
+          "labelClass": "my new label"
+        }
+      },
+      {
+        "key": "lastName",
+        "type": "input",
+        "className": "col-6",
+        "templateOptions": {
+          "label": "last name",
+          "placeholder": "type your last name",
+          "required": true
+        }
+      },
+      {
+        "key": "city",
+        "type": "input",
+        "className": "col-12",
+        "templateOptions": {
+          "label": "city",
+          "placeholder": "type your city",
+          "required": true
+        }
+      }
+    ]
+  }
+]

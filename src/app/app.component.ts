@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { GetJsonDataService } from './services/get-json-data.service';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { FormlyFieldConfig } from '@ngx-formly/core';
 
@@ -7,22 +8,28 @@ import { FormlyFieldConfig } from '@ngx-formly/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   form = new FormGroup({});
-  model = { email: 'email@gmail.com' };
-  fields: FormlyFieldConfig[] = [
-    {
-      key: 'email',
-      type: 'input',
-      templateOptions: {
-        label: 'Email address',
-        placeholder: 'Enter email',
-        required: true,
-      }
-    }
-  ];
 
-  onSubmit() {
+  model = { 
+    firstName: "Fernando",
+    age: 27
+  };
+
+  fields: FormlyFieldConfig[] = [];
+
+  constructor(private getJsonDataService: GetJsonDataService) {}
+
+  ngOnInit() {
+    this.getJsonDataService.getJson().subscribe(fields => {
+      console.log(fields)
+      this.fields = fields;
+    })
+  }
+
+  onSubmit(form: FormGroup) {
     console.log(this.model);
   }
+
+  
 }

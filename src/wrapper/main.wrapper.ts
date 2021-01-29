@@ -1,4 +1,3 @@
-// panel-wrapper.component.ts
 import { Component, ViewChild, ViewContainerRef } from '@angular/core';
 import { FieldWrapper } from '@ngx-formly/core';
 
@@ -6,10 +5,9 @@ import { FieldWrapper } from '@ngx-formly/core';
 selector: 'formly-wrapper-panel',
 template: `
    <div [class]="to.wrapperClass">
-        <!-- <label [class]="to.labelClass ? to.labelClass : ''">{{ to.label }}</label> -->
         <ng-container #fieldComponent></ng-container>
    </div>
 `,
 })
-export class CustomeWrapperComponent extends FieldWrapper {
+export class MainWrapperComponent extends FieldWrapper {
 }

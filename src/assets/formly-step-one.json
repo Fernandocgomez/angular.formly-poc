@@ -1,0 +1,68 @@
+[
+  {
+    "fieldGroupClassName": "row mb-3",
+    "fieldGroup": [
+      {
+        "key": "firstName",
+        "wrappers": ["main-wrapper"],
+        "className": "col-6",
+        "type": "main-input",
+        "templateOptions": {
+          "placeholder": "Enter First Name",
+          "required": true,
+          "attributes": {
+            "class": "form-control"
+          },
+          "wrapperClass": "wrapper-class"
+        }
+      },
+      {
+        "key": "lastName",
+        "wrappers": ["main-wrapper"],
+        "className": "col-6",
+        "type": "main-input",
+        "templateOptions": {
+          "placeholder": "Enter Last Name",
+          "required": true,
+          "attributes": {
+            "class": "form-control"
+          },
+          "wrapperClass": "wrapper-class"
+        }
+      }
+    ]
+  },
+  {
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "key": "address",
+        "wrappers": ["main-wrapper"],
+        "className": "col-8",
+        "type": "main-input",
+        "templateOptions": {
+          "placeholder": "Enter Address",
+          "required": true,
+          "attributes": {
+            "class": "form-control"
+          },
+          "wrapperClass": "wrapper-class"
+        }
+      },
+      {
+        "key": "addressTwo",
+        "wrappers": ["main-wrapper"],
+        "className": "col-4",
+        "type": "main-input",
+        "templateOptions": {
+          "placeholder": "Enter Address Two",
+          "required": true,
+          "attributes": {
+            "class": "form-control"
+          },
+          "wrapperClass": "wrapper-class"
+        }
+      }
+    ]
+  }
+]

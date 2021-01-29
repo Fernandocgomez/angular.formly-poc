@@ -1,1 +1,4 @@
-<p>step-one works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+  <formly-form [form]="form" [fields]="fields" [model]="model"></formly-form>
+  <button type="submit" class="btn btn-primary mt-3">Continue</button>
+</form>

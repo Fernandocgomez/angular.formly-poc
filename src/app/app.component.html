@@ -1,6 +1,9 @@
-<router-outlet></router-outlet>
+<nav class="row mb-3">
+  <a [routerLink]="['/step-one']" class="col-4 text-center">step one</a>
+  <a [routerLink]="['/step-two']" class="col-4 text-center">step two</a>
+  <a [routerLink]="['/step-three']" class="col-4 text-center">step three</a>
+</nav>
 
-<form [formGroup]="form" (ngSubmit)="onSubmit(form)">
-  <formly-form [form]="form" [fields]="fields" [model]="model"></formly-form>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+<main [@routeAnimations]="prepareRoute(outlet)" class="container">
+  <router-outlet #outlet="outlet"></router-outlet>
+</main>

@@ -12,11 +12,14 @@ import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 
 // Custome type
 import { FormlyFieldCustomeInput } from './../types/custome-input.type';
+import { StepOneComponent } from './components/step-one/step-one.component';
+import { StepTwoComponent } from './components/step-two/step-two.component';
+import { StepThreeComponent } from './components/step-three/step-three.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
-    FormlyFieldCustomeInput
+    FormlyFieldCustomeInput, StepOneComponent, StepTwoComponent, StepThreeComponent
   ],
   imports: [
     BrowserModule,

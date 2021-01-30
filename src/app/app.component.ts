@@ -1,3 +1,4 @@
+import { JsonConfigService } from './services/json-config.service';
 import { slider } from './animations/route-animations';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Event, NavigationEnd, Router } from "@angular/router";
@@ -15,8 +16,10 @@ export class AppComponent implements OnInit{
 
   public animationState!: number;
   
-  constructor(private route: ActivatedRoute, private router: Router) { 
-
+  constructor(
+    private route: ActivatedRoute, 
+    private router: Router,
+    private jsonConfigService: JsonConfigService) {
     const navEndEvents = this.router.events.pipe(
       filter(
         event => event instanceof NavigationEnd
@@ -24,7 +27,7 @@ export class AppComponent implements OnInit{
     )
     navEndEvents.subscribe(
       (event: any) => {
-        gtag('config', 'UA-188488030-1', {
+        gtag('config', this.jsonConfigService.GOOGLE_ANALYTICS_TRACKING_ID, {
           page_path: event.urlAfterRedirects,
         });
       }

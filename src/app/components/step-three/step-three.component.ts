@@ -23,7 +23,7 @@ export class StepThreeComponent implements OnInit {
     private leadService: LeadService) { }
 
   ngOnInit(): void {
-    this.model = this.leadService.lead; 
+    this.model = this.leadService.lead;
     this.getJsonDataService.getStepThreeJson().subscribe(field => {
       this.fields = field;
     })

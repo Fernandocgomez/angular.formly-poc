@@ -1,48 +1,53 @@
 [
   {
-    "fieldGroupClassName": "row mb-3",
+    "key": "stepThree",
     "fieldGroup": [
       {
-        "key": "dogName",
-        "wrappers": ["main-wrapper"],
-        "className": "col-4",
-        "type": "main-input",
-        "templateOptions": {
-          "placeholder": "Enter Your Dog Name",
-          "required": true,
-          "attributes": {
-            "class": "form-control"
+        "fieldGroupClassName": "row mb-3",
+        "fieldGroup": [
+          {
+            "key": "dogName",
+            "wrappers": ["main-wrapper"],
+            "className": "col-4",
+            "type": "main-input",
+            "templateOptions": {
+              "placeholder": "Enter Your Dog Name",
+              "required": true,
+              "attributes": {
+                "class": "form-control"
+              },
+              "wrapperClass": "wrapper-class"
+            }
           },
-          "wrapperClass": "wrapper-class"
-        }
-      },
-      {
-        "key": "dogLastName",
-        "wrappers": ["main-wrapper"],
-        "className": "col-4",
-        "type": "main-input",
-        "templateOptions": {
-          "placeholder": "Enter Your Dog Last Name",
-          "required": true,
-          "attributes": {
-            "class": "form-control"
+          {
+            "key": "dogLastName",
+            "wrappers": ["main-wrapper"],
+            "className": "col-4",
+            "type": "main-input",
+            "templateOptions": {
+              "placeholder": "Enter Your Dog Last Name",
+              "required": true,
+              "attributes": {
+                "class": "form-control"
+              },
+              "wrapperClass": "wrapper-class"
+            }
           },
-          "wrapperClass": "wrapper-class"
-        }
-      },
-      {
-        "key": "dogAge",
-        "wrappers": ["main-wrapper"],
-        "className": "col-4",
-        "type": "main-input",
-        "templateOptions": {
-          "placeholder": "Enter Your Dog Age",
-          "required": true,
-          "attributes": {
-            "class": "form-control"
-          },
-          "wrapperClass": "wrapper-class"
-        }
+          {
+            "key": "dogAge",
+            "wrappers": ["main-wrapper"],
+            "className": "col-4",
+            "type": "main-input",
+            "templateOptions": {
+              "placeholder": "Enter Your Dog Age",
+              "required": true,
+              "attributes": {
+                "class": "form-control"
+              },
+              "wrapperClass": "wrapper-class"
+            }
+          }
+        ]
       }
     ]
   }

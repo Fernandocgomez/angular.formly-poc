@@ -5,7 +5,17 @@ import { Injectable } from '@angular/core';
 })
 export class LeadService {
 
-  lead = { }
+  public lead: any = { 
+    leadData: {
+      leadId: "ergeg5f5wef54ew5f4ew564f"
+    },
+    state: {
+
+    },
+    additionalData: {
+
+    }
+  }
 
   constructor() { }
 }

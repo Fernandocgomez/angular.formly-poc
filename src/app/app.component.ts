@@ -1,6 +1,6 @@
 import { slider } from './animations/route-animations';
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from "@angular/router";
+import { ActivatedRoute, RouterOutlet } from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -9,13 +9,15 @@ import { RouterOutlet } from "@angular/router";
   animations: [ slider ]
 })
 export class AppComponent implements OnInit{
+
+  public animationState!: number;
   
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() { }
 
-  prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  onActivate($event: any) {
+    this.animationState = this.route.firstChild!.snapshot.data['routeIdx'];
   }
 
   

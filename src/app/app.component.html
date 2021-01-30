@@ -4,6 +4,6 @@
   <a [routerLink]="['/step-three']" class="col-4 text-center">step three</a>
 </nav>
 
-<main [@routeAnimations]="prepareRoute(outlet)" class="container">
-  <router-outlet #outlet="outlet"></router-outlet>
+<main [@animRoutes]="animationState">
+  <router-outlet (activate)="onActivate($event)"></router-outlet>
 </main>

@@ -6,9 +6,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: "step-one", component: StepOneComponent, data: { animation: '1' } },
-  { path: "step-two", component: StepTwoComponent, data: { animation: '2' } },
-  { path: "step-three", component: StepThreeComponent, data: { animation: '3' } },
+  { path: "step-one", component: StepOneComponent, data: { routeIdx: '0' } },
+  { path: "step-two", component: StepTwoComponent, data: { routeIdx: '1' } },
+  { path: "step-three", component: StepThreeComponent, data: { routeIdx: '2' } },
 ];
 
 @NgModule({

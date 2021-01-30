@@ -3,12 +3,12 @@
     "fieldGroupClassName": "row mb-3",
     "fieldGroup": [
       {
-        "key": "firstName",
+        "key": "address",
         "wrappers": ["main-wrapper"],
-        "className": "col-6",
+        "className": "col-9",
         "type": "main-input",
         "templateOptions": {
-          "placeholder": "First Name",
+          "placeholder": "Street Address",
           "required": true,
           "attributes": {
             "class": "form-control"
@@ -17,12 +17,12 @@
         }
       },
       {
-        "key": "lastName",
+        "key": "addressTwo",
         "wrappers": ["main-wrapper"],
-        "className": "col-6",
+        "className": "col-3",
         "type": "main-input",
         "templateOptions": {
-          "placeholder": "Last Name",
+          "placeholder": "Street Address Line 2",
           "required": true,
           "attributes": {
             "class": "form-control"
@@ -36,12 +36,12 @@
     "fieldGroupClassName": "row mb-3",
     "fieldGroup": [
       {
-        "key": "dob",
+        "key": "city",
         "wrappers": ["main-wrapper"],
         "className": "col-4",
         "type": "main-input",
         "templateOptions": {
-          "placeholder": "Date Of Birth",
+          "placeholder": "City",
           "required": true,
           "attributes": {
             "class": "form-control"
@@ -50,12 +50,12 @@
         }
       },
       {
-        "key": "email",
+        "key": "state",
         "wrappers": ["main-wrapper"],
         "className": "col-4",
         "type": "main-input",
         "templateOptions": {
-          "placeholder": "Email",
+          "placeholder": "State",
           "required": true,
           "attributes": {
             "class": "form-control"
@@ -64,12 +64,12 @@
         }
       },
       {
-        "key": "phone",
+        "key": "zipCode",
         "wrappers": ["main-wrapper"],
         "className": "col-4",
         "type": "main-input",
         "templateOptions": {
-          "placeholder": "Phone",
+          "placeholder": "Zip Code",
           "required": true,
           "attributes": {
             "class": "form-control"

@@ -1,45 +1,75 @@
 import {
-    trigger,
-    transition,
-    style,
-    query,
-    group,
-    animateChild,
-    animate,
-    keyframes,
-  } from '@angular/animations';
+  trigger,
+  transition,
+  style,
+  query,
+  group,
+  animateChild,
+  animate,
+  keyframes,
+} from '@angular/animations';
 
-export const slider =
-  trigger('routeAnimations', [
-    transition('1 => 2', slideTo('right') ),
-    transition('1 => 3', slideTo('right') ),
-    transition('3 => 2', slideTo('left') ),
-    transition('3 => 1', slideTo('left') ),
-    transition('2 => 1', slideTo('left') ),
-    transition('2 => 3', slideTo('right') ),
-  ]);
+const animationSpeedTransition = ".75s"; 
 
-function slideTo(direction: any) {
-  const optional = { optional: true };
-  return [
-    query(':enter, :leave', [
-      style({
-        position: 'absolute',
-        top: 0,
-        [direction]: 0,
-        width: '100%'
-      })
-    ], optional),
-    query(':enter', [
-      style({ [direction]: '-100%'})
-    ]),
-    group([
-      query(':leave', [
-        animate('600ms ease', style({ [direction]: '100%'}))
-      ], optional),
-      query(':enter', [
-        animate('600ms ease', style({ [direction]: '0%'}))
-      ])
-    ])
-  ];
-}
+const left = [
+  query(':enter, :leave', style({ position: 'fixed', width: '100%' }), {
+    optional: true,
+  }),
+  query(':leave', [style({ display: 'none' })]),
+  group([
+    query(
+      ':enter',
+      [
+        style({ transform: 'translateX(-100%)' }),
+        animate( `${animationSpeedTransition} ease-out`, style({ transform: 'translateX(0%)' })),
+      ],
+      {
+        optional: true,
+      }
+    ),
+    query(
+      ':leave',
+      [
+        style({ transform: 'translateX(0%)' }),
+        animate(`${animationSpeedTransition} ease-out`, style({ transform: 'translateX(100%)' })),
+      ],
+      {
+        optional: true,
+      }
+    ),
+  ]),
+];
+
+const right = [
+  query(':enter, :leave', style({ position: 'fixed', width: '100%' }), {
+    optional: true,
+  }),
+  query(':leave', [style({ display: 'none' })]),
+  group([
+    query(
+      ':enter',
+      [
+        style({ transform: 'translateX(100%)' }),
+        animate(`${animationSpeedTransition} ease-out`, style({ transform: 'translateX(0%)' })),
+      ],
+      {
+        optional: true,
+      }
+    ),
+    query(
+      ':leave',
+      [
+        style({ transform: 'translateX(0%)' }),
+        animate(`${animationSpeedTransition} ease-out`, style({ transform: 'translateX(-100%)' })),
+      ],
+      {
+        optional: true,
+      }
+    ),
+  ]),
+];
+
+export const slider = trigger('animRoutes', [
+  transition(':increment', right),
+  transition(':decrement', left),
+]);

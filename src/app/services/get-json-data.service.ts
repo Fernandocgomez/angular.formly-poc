@@ -17,4 +17,14 @@ export class GetJsonDataService {
     return this.http
     .get<FormlyFieldConfig[]>('../../assets/formly-step-one.json')
   }
+
+  getStepThreeJson() {
+    return this.http
+    .get<FormlyFieldConfig[]>('../../assets/formly-step-three.json')
+  }
+
+  getStepTwoJson() {
+    return this.http
+    .get<FormlyFieldConfig[]>('../../assets/formly-step-two.json')
+  }
 }

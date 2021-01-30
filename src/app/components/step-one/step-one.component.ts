@@ -15,11 +15,12 @@ export class StepOneComponent implements OnInit {
 
   model = { };
 
-  fields: FormlyFieldConfig[] = [
-    
-  ];
+  fields: FormlyFieldConfig[] = [];
 
-  constructor(private router: Router, private getJsonDataService: GetJsonDataService, private leadService: LeadService) { }
+  constructor(
+    private router: Router, 
+    private getJsonDataService: GetJsonDataService, 
+    private leadService: LeadService) { }
 
   ngOnInit(): void {
     this.model = this.leadService.lead; 
@@ -30,7 +31,6 @@ export class StepOneComponent implements OnInit {
 
   onSubmit(form: FormGroup) {
     this.leadService.lead = this.model;
-    console.log(this.model);
     this.router.navigate(["step-two"]);
   }
 

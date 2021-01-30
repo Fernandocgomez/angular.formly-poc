@@ -6,7 +6,6 @@ import { FieldWrapper } from '@ngx-formly/core';
 selector: 'formly-wrapper-panel',
 template: `
    <div [class]="to.wrapperClass">
-        <!-- <label [class]="to.labelClass ? to.labelClass : ''">{{ to.label }}</label> -->
         <ng-container #fieldComponent></ng-container>
    </div>
 `,

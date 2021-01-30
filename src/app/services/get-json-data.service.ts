@@ -6,12 +6,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class GetJsonDataService {
+  
   constructor(private http: HttpClient) { }
-
-  getJson() {
-    return this.http
-      .get<FormlyFieldConfig[]>('../../assets/formly-config.json')
-  }
 
   getStepOneJson() {
     return this.http

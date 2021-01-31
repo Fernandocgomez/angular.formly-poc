@@ -1,0 +1,101 @@
+[
+    {
+      "key": "stepOne",
+      "fieldGroup": [
+        {
+          "fieldGroupClassName": "row mb-3",
+          "fieldGroup": [
+            {
+              "key": "firstName",
+              "wrappers": ["main-wrapper"],
+              "className": "col-6",
+              "type": "main-input",
+              "templateOptions": {
+                "placeholder": "First Name",
+                "required": true,
+                "attributes": {
+                  "class": "form-control"
+                },
+                "wrapperClass": "wrapper-class"
+              }
+            },
+            {
+              "key": "lastName",
+              "wrappers": ["main-wrapper"],
+              "className": "col-6",
+              "type": "main-input",
+              "templateOptions": {
+                "placeholder": "Last Name",
+                "required": true,
+                "attributes": {
+                  "class": "form-control"
+                },
+                "wrapperClass": "wrapper-class"
+              }
+            }
+          ]
+        },
+        {
+          "fieldGroupClassName": "row mb-3",
+          "fieldGroup": [
+            {
+              "key": "dob",
+              "wrappers": ["main-wrapper"],
+              "className": "col-4",
+              "type": "main-input",
+              "templateOptions": {
+                "placeholder": "Date Of Birth",
+                "required": true,
+                "attributes": {
+                  "class": "form-control"
+                },
+                "wrapperClass": "wrapper-class"
+              }
+            },
+            {
+              "key": "email",
+              "wrappers": ["main-wrapper"],
+              "className": "col-4",
+              "type": "main-input",
+              "templateOptions": {
+                "placeholder": "Email",
+                "required": true,
+                "attributes": {
+                  "class": "form-control"
+                },
+                "wrapperClass": "wrapper-class"
+              }
+            },
+            {
+              "key": "phone",
+              "wrappers": ["main-wrapper"],
+              "className": "col-2",
+              "type": "main-input",
+              "templateOptions": {
+                "placeholder": "Phone",
+                "required": true,
+                "attributes": {
+                  "class": "form-control"
+                },
+                "wrapperClass": "wrapper-class"
+              }
+            },
+            {
+              "key": "ssn",
+              "wrappers": ["main-wrapper"],
+              "className": "col-2",
+              "type": "main-input",
+              "templateOptions": {
+                "placeholder": "SSN",
+                "required": true,
+                "attributes": {
+                  "class": "form-control"
+                },
+                "wrapperClass": "wrapper-class"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]

@@ -25,7 +25,7 @@ export class StepTwoComponent implements OnInit {
 
   ngOnInit(): void {
     this.model = this.leadService.lead; 
-    this.getJsonDataService.getStepTwoJson().subscribe(field => {
+    this.getJsonDataService.getFieldConfig("formly-step-two").subscribe(field => {
       this.fields = field;
     })
   }

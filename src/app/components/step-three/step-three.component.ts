@@ -24,7 +24,7 @@ export class StepThreeComponent implements OnInit {
 
   ngOnInit(): void {
     this.model = this.leadService.lead;
-    this.getJsonDataService.getStepThreeJson().subscribe(field => {
+    this.getJsonDataService.getFieldConfig("formly-step-three").subscribe(field => {
       this.fields = field;
     })
   }
